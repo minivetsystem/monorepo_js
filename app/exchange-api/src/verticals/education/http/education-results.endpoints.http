@@ -1,0 +1,10 @@
+GET http://localhost:3333/education/results?
+  search_id=66027f6a943f84b7053518e3 &
+  wait_time=5
+Content-Type: application/json
+
+### Refresh User token
+GET https://newapi.astoriacompany.com/education/results?
+  search_id=66028dff355204e91313369f &
+  wait_time=5
+Content-Type: application/json

@@ -1,0 +1,15 @@
+.logo {
+  margin-right: 100px;
+  width: 250px;
+  height: 32.15px;
+  cursor: pointer;
+  @media screen and (max-width: 1220px) {
+    margin-right: 50px;
+    width: 180px;
+    height: 25px;
+  }
+  @media screen and (max-width: 992px) {
+    margin-left: 50px;
+    margin-right: 0px;
+  }
+}

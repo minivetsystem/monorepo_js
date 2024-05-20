@@ -1,0 +1,29 @@
+.footerWrap {
+  .footerLogo {
+    img {
+      width: 150px;
+      height: 20px;
+      padding: 10px 90px;
+      @media screen and (max-width: 991px) {
+        // margin-left: 25px;
+        padding-left: 0px;
+      }
+      @media screen and (max-width: 576px) {
+        margin-left: 10px;
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    margin-top: 20px;
+  }
+}
+
+.copyrightWrap {
+  @media screen and (max-width: 991px) {
+    margin-bottom: 32px;
+  }
+  @media screen and (max-width: 576px) {
+    margin-bottom: 24px;
+    padding-right: 10px;
+  }
+}

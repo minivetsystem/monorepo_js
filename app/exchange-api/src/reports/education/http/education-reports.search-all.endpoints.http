@@ -1,0 +1,5 @@
+GET http://localhost:3333/education-reports/search-reports?
+  start_date=2024-02-29T08:58:10.866Z &
+  end_date=2024-03-20T08:58:10.866Z &
+  limit=10 &
+  skip=0

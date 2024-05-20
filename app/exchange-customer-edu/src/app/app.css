@@ -1,0 +1,26 @@
+:root{
+   --main: #7E22CE;
+   --gray1: #52525B;
+   --gray2: #A1A1AA;
+   --gray3: #71717A;
+   --gray4: #D4D4D8;
+   --gray5: #F4F4F5;
+}
+
+.react-datepicker-wrapper{
+   width: auto;
+}
+
+.react-datepicker-wrapper input{
+  height: 44px;
+}
+
+.react-datepicker__day--in-range{
+   background-color: var(--main);
+   opacity: 0.6;
+   color: white;
+}
+
+.react-datepicker__day--range-end,.react-datepicker__day--range-start{
+   opacity: 1;
+}

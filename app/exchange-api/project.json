@@ -1,0 +1,68 @@
+{
+  "name": "exchange-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/exchange-api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "generatePackageJson": true,
+        "outputPath": "dist/apps/exchange-api",
+        "main": "apps/exchange-api/src/main.ts",
+        "tsConfig": "apps/exchange-api/tsconfig.app.json",
+        "assets": ["apps/exchange-api/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/exchange-api/src/environments/environment.ts",
+              "with": "apps/exchange-api/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/js:node",
+      "options": {
+        "buildTarget": "exchange-api:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "exchange-api:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/exchange-api/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/exchange-api/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "compodoc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/exchange-api",
+        "command": "npx compodoc -p tsconfig.doc.json -w -s -r 2365"
+      }
+    }
+  },
+  "tags": []
+}

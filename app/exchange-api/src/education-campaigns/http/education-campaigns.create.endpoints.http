@@ -1,0 +1,12 @@
+## Adding Vendor Astoria Company and Buyer Back2Learn
+POST https://newapi.astoriacompany.com/education-campaigns
+Content-Type: application/json
+
+{
+  "name": "Back2Learn Buyer Agree Media Vendor Campaign",
+  "active": true,
+  "start_date": "2024-03-26T06:26:37.274Z",
+  "commission_percentage": 25,
+  "buyers": ["65f7d4154d8c9df99dc1d1c9"],
+  "vendor": "66027106355204e91312569a"
+}

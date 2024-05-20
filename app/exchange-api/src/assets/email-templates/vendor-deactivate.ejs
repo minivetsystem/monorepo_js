@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" href="includes/styles.css" type="text/stylesheet">
+  <style>
+    #emailBody {
+      background-color: #FFFFFF;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body bgcolor="#E1E1E1" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+  <center style="background-color:#E1E1E1;">
+    <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTbl" style="table-layout: fixed;max-width:100% !important;width: 100% !important;min-width: 100% !important;">
+      <tr>
+        <td align="center" valign="top" id="bodyCell">
+          <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="500" id="emailBody">
+            <tr>
+              <td align="center" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table border="0" cellpadding="0" cellspacing="0" width="500" style="margin-top:30px !important" class="flexibleContainer">
+                        <tr>
+                          <td align="center" valign="top" width="500" class="flexibleContainerCell">
+                            <table border="0" cellpadding="30" cellspacing="0" width="100%">
+                              <tr>
+                                <td align="center" valign="top">
+
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td valign="top" class="textContent">
+                                        <div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">
+                                            <p>Dear <%= vendor_name %>,</p>
+                                            <p>Your account has been de-activated as there are no pings received from last 90 days.</p>
+                                            <p>Regards,<br/>                                          
+                                                The Astoria Team</p>                              
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <%- include('./includes/footer.ejs') %>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+
+</html>

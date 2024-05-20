@@ -1,0 +1,1 @@
+export { Setting, SettingDocument, SettingSchema } from './setting.schema';

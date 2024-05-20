@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" href="includes/styles.css" type="text/stylesheet">
+  <style>
+    #emailBody {
+      background-color: #FFFFFF;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body bgcolor="#E1E1E1" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+  <center style="background-color:#E1E1E1;">
+    <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTbl" style="table-layout: fixed;max-width:100% !important;width: 100% !important;min-width: 100% !important;">
+      <tr>
+        <td align="center" valign="top" id="bodyCell">
+          <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="500" id="emailBody">
+            <tr>
+              <td align="center" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table border="0" cellpadding="0" cellspacing="0" width="500" style="margin-top:30px !important" class="flexibleContainer">
+                        <tr>
+                          <td align="center" valign="top" width="500" class="flexibleContainerCell">
+                            <table border="0" cellpadding="30" cellspacing="0" width="100%">
+                              <tr>
+                                <td align="center" valign="top">
+
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td valign="top" class="textContent">
+                                        <div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">
+                                          <p>Dear <%= receiver_name %>,</p>
+                                          <p>Welcome to Astoria Company! Your account is now setup.</p>    
+                                          <p><b><u>Please save this important information for future reference.</u></b></p>                                          
+                                          <p>Make sure you send us your W9 and Bank information to: <a href='mailto:w9@astoriacompany.com' target='_top'>w9@astoriacompany.com</a></p>                                          
+                                          <p>Please send all invoices to: <a href='mailto:invoices@astoriacompany.com' target='_top'>invoices@astoriacompany.com</a></p>
+                                          <p>Please email <a href='mailto:tech@astoriacompany.com' target='_top'>tech@astoriacompany.com</a> for technical assistance and/or any integration questions.</p>
+                                          <p>Sushil is Head of Support, please copy him on all emails:<br><a href='mailto:support@astoriacompany.com' target='_top'>support@astoriacompany.com</a></p>
+                                          <p>Your Vendor ID (VID): <b><%= vendor_id %></b></p>
+                                          <p>To Access your account login to:</p>
+                                          <p>Link: <a href="https://app.astoriacompany.com">https://app.astoriacompany.com</a></p>
+                                          <p><b>username: <%= username %></b></p>
+                                          <p><b>password: <%= password %></b></p>
+                                          <p>Please <a href="https://api-spec-docs.vercel.app/docs/auto-insurance/auto-insurance-ping-specs">Click Here</a> to access the Ping/Post vendor specs:</p>                                          
+                                          <p>For testing, i.e. when lead_mode=0, please attempt at least three different leads, each with a different zip code. One should end with and even number, one should end with an odd number, and one should end with a 0 (zero). The responses generated will vary based on the zip code used, as follows::</p>
+                                          <p>&#45; If you PING a test lead with a zip code that ends with a ZERO (e.g. 19460), you will receive the 'No Coverage' response, i.e. it will be REJECTED on the PING.</p>
+                                          <p>&#45; If you PING a test lead with a zip code that ends with an ODD number (e.g. 19461), you will receive a bid, i.e. it will be ACCEPTED on the PING. When you POST that same lead to us, it will be REJECTED on the POST.</p>
+                                          <p>&#45; If you PING a test lead with a zip code that ends with an EVEN number (e.g. 19462), you will receive a bid. When you POST that same lead to us, it will be ACCEPTED on the POST</p>
+                                          <p>Regards,<br/>                                          
+                                            The Astoria Team</p>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <%- include('./includes/footer.ejs') %>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+
+</html>

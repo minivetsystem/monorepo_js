@@ -1,0 +1,17 @@
+POST https://newapi.astoriacompany.com/education/lead_requests
+Content-Type: application/json
+
+{
+  "result_search_id": "65f7d56f4d8c9df99dc1e929",
+  "result_id": 535,
+  "lead_education": {
+    "campus_id": 12345,
+    "program_id": 1456
+  },
+  "lead": {
+    "phone2": "98987654"
+  },
+  "lead_consent": {
+    "tcpa_consent": "test consent"
+  }
+}

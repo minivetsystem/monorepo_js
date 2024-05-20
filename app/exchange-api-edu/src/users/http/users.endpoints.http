@@ -1,0 +1,9 @@
+### Create a new user
+POST http://localhost:{{port}}/users/signup
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "email": "tesst@email.com",
+  "password": "testPass123#"
+}

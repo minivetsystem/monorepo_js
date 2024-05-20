@@ -1,0 +1,14 @@
+### Login User
+POST http://localhost:{{port}}/auth/login
+Content-Type: application/json
+
+{
+  "username": "manikbajaj",
+  "password": "Password123#"
+}
+
+
+### Refresh User token
+POST http://localhost:{{port}}/auth/refresh-token
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RzMjNAZW1haWwuY29tIiwiaWF0IjoxNjM5NDc5MjQ3LCJleHAiOjE2Mzk0ODI4NDd9._h1-RE9CrDKtpmOj4MTN015qoOlcnr-Pz3-BuxPAUhs

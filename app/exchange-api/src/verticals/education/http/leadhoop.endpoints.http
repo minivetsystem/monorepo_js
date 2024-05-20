@@ -1,0 +1,26 @@
+## Send a valid search request to Digital Fyber as an example
+## Details Shared By Sushil
+## API Specs: https://back2learn.leadhoop.com/admin/publisher_apis/145/api_specs
+## Web Username: myadav123
+## Web API Password: NC123
+## campaign_code=FlRxh7PcweoaSDaJPfUmw
+POST http://back2learn-api.leadhoop.com/v2/searches
+Content-Type: application/x-www-form-urlencoded
+## Base 64 encoding of Username:Password using Back2Learn With Sushil's account
+Authorization: Basic bXlhZGF2MTIzOk5DMTIz
+
+partner_code=uFEM5xE4ExNwR1C8eBWC8g &
+test=true &
+lead[phone1]=(917)478-3878 &
+lead[email]=anyemail@gmail.com &
+lead[ip]=122.160.164.52 &
+lead[signup_url]=https://www.testurl.com &
+## Sample leadid copied from website
+lead[service_leadid]=2AAFB196-9590-8FEE-C060-57DCC022F46D &
+lead_address[zip]=19872 &
+lead_address[city]=nyc &
+lead_address[state]=NY &
+lead_education[school_type]=3 &
+lead_education[grad_year]=2010 &
+lead_education[education_level_id]=education-level-ged
+

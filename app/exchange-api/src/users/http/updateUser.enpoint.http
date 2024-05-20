@@ -1,0 +1,118 @@
+### Create New User
+### TODO: Strangely Zeeshan is picking up IDs of roles which for the `role`
+### property which will differ in case of production as well as development
+### databases. So it is better to use the role name instead of ID at a later
+### this will require a change. Also its better to remove the development
+### vortex altogether from this structure its not being used and must be done
+### again.
+PATCH http://localhost:3333/users/658bc71e9abc7ab19b5c67d6
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hbmlrYmFqYWoiLCJpYXQiOjE3MDc3MTY5OTEsImV4cCI6MTcwNzg4OTc5MX0.0kGeNII21HoI7k1Dgq75gD0cuHxeOrd_1o_4xcFUYq4
+
+{
+  "first_name": "Manik",
+  "middle_name": "",
+  "last_name": "Admin",
+  "email": "manik@astoriacompany.com",
+  "username": "manikbajaj",
+  "password": "Password123#",
+  "primary_phone": "",
+  "secondary_phone": "",
+  "address": "",
+  "city": "",
+  "zip": "",
+  "country": "",
+  "website": "",
+  "user_status": "active_live",
+  "is_call_center": false,
+  "accept_returns": false,
+  "is_hide_all_leads_reports": false,
+  "is_io_received": true,
+  "vendor_lead_quality": "",
+  "lead_flow_status": "paused",
+  "is_allowed_by_ews": true,
+  "is_trusted_form_claim_enabled": false,
+  "payment_method": "ach",
+  "is_return_reminder_email": false,
+  "prepays": false,
+  "main_email_list": "tech@astoriacompany.com",
+  "tech_email_list": "tech@astoriacompany.com",
+  "role": "6433a6a1862d922ed02822bb",
+  "added_on": "2023-08-29T05:59:07.666Z",
+  "added_by": "64a20bcaabebeb123da0bc00",
+  "updated_on": "2023-11-28T06:10:59.786Z",
+  "updated_by": "64a20bcaabebeb123da0bc00",
+  "leadhoop_partner_code": "partner-code",
+  "leadhoop_partner_username": "username",
+  "leadhoop_partner_password": "password",
+  "leadhoop_vendor_comission": 25
+}
+
+### Additional Properties Used BY Zeeshan Inside the User Object but do not
+### Exist inside the DTO
+# "vendor_vortex": [
+#    "6527b48ac61e8aa0596f116b"
+#  ],
+#  "lead_type_settings": [
+#    {
+#      "_id": "6527b581c61e8aa0596f1173",
+#      "lead_type": "6480006d5c2e75418a8f0ac6",
+#      "vendor": "6527b45ac61e8aa0596f1169",
+#      "status": "active",
+#      "lead_flow_status": "running",
+#      "payment_model": "rev_share",
+#      "rev_share": 75,
+#      "vendor_min_payout_cap": 0,
+#      "vendor_max_payout_cap": 20,
+#      "tcpa_text": "",
+#      "is_tcpa_text_active": false,
+#      "daily_accepted_cap": 20,
+#      "hourly_accepted_cap": 5,
+#      "max_pings_per_min_cap": 70
+#    }
+#  ],
+#  "lead_type": {
+#    "_id": "6480006d5c2e75418a8f0ac6",
+#    "lead_type": "Auto Insurance",
+#    "lead_type_id": 5,
+#    "requests": []
+#  },
+#  "vendor_subids": [
+#    {
+#      "_id": "6528d08c311eeb193e659fcb",
+#      "vendor": "6527b45ac61e8aa0596f1169",
+#      "sub_id": "112413",
+#      "campaigns": [
+#        "64af73a036798f0dd93c44e6"
+#      ],
+#      "is_blocked": false
+#    },
+#    {
+#      "_id": "6548c0e8caf01dbf90fbcfa2",
+#      "vendor": "6527b45ac61e8aa0596f1169",
+#      "sub_id": "112413",
+#      "campaigns": [],
+#      "is_blocked": false
+#    },
+#    {
+#      "_id": "6548c112caf01dbf90fbcfb5",
+#      "vendor": "6527b45ac61e8aa0596f1169",
+#      "sub_id": "112413",
+#      "campaigns": [],
+#      "is_blocked": false
+#    },
+#    {
+#      "_id": "654c6ce98a31fd146b7bcb3f",
+#      "vendor": "6527b45ac61e8aa0596f1169",
+#      "sub_id": "4323423",
+#      "campaigns": [],
+#      "is_blocked": true
+#    },
+#    {
+#      "_id": "65360607ec6e99c8e419cc8a",
+#      "vendor": "6527b45ac61e8aa0596f1169",
+#      "sub_id": "123-ABC",
+#      "campaigns": [],
+#      "is_blocked": true
+#    }
+#  ]

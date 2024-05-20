@@ -1,0 +1,3 @@
+GET http://localhost:3333/education-campaigns?
+  limit=10 &
+  skip=0

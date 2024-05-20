@@ -1,0 +1,93 @@
+POST http://localhost:3333/education/searches
+Content-Type: application/json
+
+{
+  "test": true,
+  "education_campaign_id": "65c5ca83e2e80ad3007938eb",
+  "subid": "test_subid_1",
+  "subid2": "test_subid_2",
+  "subid3": "test_subid_3",
+  "subid4": "test_subid_4",
+  "lead": {
+    "phone": "(972) 474-3278",
+    "email": "manik@gmail.com",
+    "ip": "172.145.89.21",
+    "firstName": "John",
+    "lastName": "Doe",
+    "gender": "M",
+    "age": 31,
+    "dob": "1985-02-21",
+    "besttime_contact": "best-time-to-contact-afternoon",
+    "service_leadid": "teststring",
+    "source_service_leadid": "test",
+    "service_trusted_form": "test",
+    "source_service_trusted_form": "test",
+    "signup_url": "http://www.something.com",
+    "consent_url": "http://www.something.com"
+  },
+  "lead_address": {
+    "address": "2nd St SW, Albuquerque",
+    "address2": "702, Suite 3",
+    "zip": 19872,
+    "city": "New York",
+    "state": "CA"
+  },
+  "lead_education": {
+    "grad_year": 1985,
+    "education_level_id": "education-level-ged",
+    "start_date": "desired-start-date-not-sure",
+    "school_type": 3,
+    "level_interest": "level-of-interest-2",
+    "area_of_studies": [
+      "business",
+      "education-teaching"
+    ],
+    "program_names": [
+      "acquisition-contract-management"
+    ]
+  },
+  "lead_background": {
+    "military_type": "military-af-civilian",
+    "us_citizen": "citizenship-yes",
+    "internet_pc": "computer-with-internet-yes",
+    "teaching_license": "teaching-license-yes",
+    "rn_license": "registered-nurse-yes",
+    "enrolled_status": "enrolled-status-no"
+  }
+}
+
+
+### Minimum Search Request
+POST https://newapi.astoriacompany.com/education/searches
+Content-Type: application/json
+
+{
+  "test": true,
+  "education_campaign_id": "65f7d50b4d8c9df99dc1e299",
+  "lead": {
+    "phone": "(972) 472-3271",
+    "email": "newmail23@gmail.com",
+    "ip": "172.145.89.21",
+    "firstName": "Manik",
+    "lastName": "Bajaj",
+    "gender": "M",
+    "age": 39,
+    "dob": "1985-02-21",
+    "service_leadid": "2AAFB196-9590-8FEE-C060-57DCC022F46D",
+    "signup_url": "http://www.something.com"
+  },
+  "lead_address": {
+    "address": "2nd St SW, Albuquerque",
+    "address2": "702, Suite 3",
+    "zip": 19872,
+    "city": "New York",
+    "state": "NY"
+  },
+  "lead_education": {
+    "grad_year": 2022,
+    "education_level_id": "education-level-high-school-diploma",
+    "start_date": "desired-start-date-not-sure",
+    "school_type": 3
+  },
+  "lead_background": {}
+}

@@ -1,0 +1,64 @@
+{
+  "name": "exchange-retail-app-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/exchange-retail-app-api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/exchange-retail-app-api",
+        "main": "apps/exchange-retail-app-api/src/main.ts",
+        "tsConfig": "apps/exchange-retail-app-api/tsconfig.app.json",
+        "assets": ["apps/exchange-retail-app-api/src/assets"],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/exchange-retail-app-api/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "exchange-retail-app-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "exchange-retail-app-api:build:development"
+        },
+        "production": {
+          "buildTarget": "exchange-retail-app-api:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/exchange-retail-app-api/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/exchange-retail-app-api/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,28 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": false,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": false,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@monorepo/exchange-api-core": ["libs/exchange-api-core/src/index.ts"],
+      "@monorepo/material-ui-components": [
+        "libs/material-ui-components/src/index.ts"
+      ],
+      "@monorepo/react-dashboard": ["libs/react-dashboard/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
